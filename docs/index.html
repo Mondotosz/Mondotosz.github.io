@@ -9,16 +9,28 @@
     <link rel="stylesheet" href="css/tailwind.css">
 </head>
 
-<body class="bg-white dark:bg-gray-600">
-    <nav class="w-full h-16 mx-auto px-2 bg-gray-600 dark:bg-gray-800">
+<body class="bg-white text-black dark:bg-gray-600 dark:text-gray-300">
+    <nav class="w-full h-16 mx-auto px-2 bg-gray-600 text-gray-300 dark:bg-gray-800 dark:text-gray-300">
         <div class="flex flex-col justify-center h-full">
-            <div class="flex flex-row justify-end w-full">
-                <img src="svg/beaker.svg" alt="" class="h-10">
-                <button id="toggleDarkMode" class="p-2 font-bold bg-indigo-500 text-purple-900 dark:bg-purple-500 rounded-lg dark:text-white">Toggle</button>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="flex flex-row justify-start">
+                    <a href="/" class="px-2 py-3 mx-1 rounded-md text-sm font-medium hover:bg-gray-900">Logo here</a>
+                </div>
+                <div class="col-span-2 flex flex-row justify-center">
+                    <a href="#" class="px-2 py-3 mx-1 rounded-md text-sm font-medium bg-gray-900">Resume</a>
+                    <a href="#" class="px-2 py-3 mx-1 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Showcase</a>
+                    <a href="#" class="px-2 py-3 mx-1 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white">Lab</a>
+                </div>
+                <div class="flex flex-row justify-end">
+                    <button id="toggleDarkMode"
+                        class="my-auto p-2 font-bold bg-indigo-500 text-purple-900 dark:bg-purple-500 rounded-lg dark:text-white">
+                        <img src="/svg/sun.svg" style="height:1rem;" alt="toggle">
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/nav.js"></script>
 </body>
 
 </html>
