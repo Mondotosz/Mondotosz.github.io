@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,67 @@
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
-<body class="flex flex-row items-center justify-between min-h-screen">
+<body class="flex flex-col items-center justify-between min-h-screen">
+    <div class="w-full max-w-5xl">
+        <!-- Info card -->
+        <div
+            class="flex flex-col items-center py-6 space-y-3 md:space-y-0 md:flex-row md:justify-between md:px-24">
+            <!-- Picture -->
+            <div class="w-64 h-64 bg-white rounded-full"></div>
+            <!-- Info -->
+            <div class="flex flex-col space-y-2 md:text-right">
+                <div class="flex flex-col">
+                    <h1 class="text-4xl font-medium">Kenan Augsburger</h1>
+                    <h2 class="text-2xl">Informaticien d'entreprise</h2>
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <!-- Address -->
+                    <div class="flex items-center justify-center space-x-1 md:justify-end">
+                        <p>Route d'Orbe 2, 1438 Mathod</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex items-center justify-center space-x-1 md:justify-end">
+                        <a href="tel:0774632411"
+                            class="underline transition-colors duration-200 hover:text-purple-600">077
+                            463 24 11</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <!-- Mail -->
+                    <div class="flex items-center justify-center space-x-1 md:justify-end">
+                        <a href="mailto:kenan.augsburger@cpnv.ch"
+                            class="underline transition-colors duration-200 hover:text-purple-600">kenan.augsburger@cpnv.ch</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                    </div>
+                    <!-- Date of birth -->
+                    <div class="flex items-center justify-center space-x-1 md:justify-end">
+                        <p>2 septembre 2000</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills -->
+        <!-- Languages -->
+        <!-- Experience -->
+        <!-- Education -->
+        <!-- Interest -->
+    </div>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="/js/components.js"></script>
 </body>
