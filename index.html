@@ -77,21 +77,21 @@
                 <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-12">
                     <div class="grid items-center flex-grow grid-cols-3 gap-2">
                         <h3 class="col-span-3 font-medium">Langages</h3>
-                        <p class="bg-primary border-primary badge text-base-100">javascript</p>
-                        <progress class="col-span-2 progress progress-primary" value="50" max="100"></progress>
-                        <p class="bg-primary border-primary badge text-base-100">C</p>
-                        <progress class="col-span-2 progress progress-primary" value="30" max="100"></progress>
-                        <p class="bg-primary border-primary badge text-base-100">C#</p>
-                        <progress class="col-span-2 progress progress-primary" value="50" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">javascript</p>
+                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">C</p>
+                        <progress class="col-span-2 progress progress-accent" value="30" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">C#</p>
+                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
                     </div>
                     <div class="grid items-center flex-grow grid-cols-3 gap-2">
                         <h3 class="col-span-3 font-medium">Technologies</h3>
-                        <p class="bg-primary border-primary badge text-base-100">Tailwindcss</p>
-                        <progress class="col-span-2 progress progress-primary" value="50" max="100"></progress>
-                        <p class="bg-primary border-primary badge text-base-100">Alpine.js</p>
-                        <progress class="col-span-2 progress progress-primary" value="40" max="100"></progress>
-                        <p class="bg-primary border-primary badge text-base-100">JQuery</p>
-                        <progress class="col-span-2 progress progress-primary" value="30" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">Tailwindcss</p>
+                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">Alpine.js</p>
+                        <progress class="col-span-2 progress progress-accent" value="40" max="100"></progress>
+                        <p class="bg-accent border-accent badge text-accent-content">JQuery</p>
+                        <progress class="col-span-2 progress progress-accent" value="30" max="100"></progress>
                     </div>
                 </div>
             </div>
@@ -138,28 +138,38 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Languages -->
-        <div class="md:shadow-lg md:card bg-base-100">
-            <div class="card-body">
-                <h2 class="card-title">Langues</h2>
-                <table class="table-auto">
-                    <tr>
-                        <td>Français</td>
-                        <td>Langue Maternelle</td>
-                    </tr>
-                    <tr>
-                        <td>Anglais</td>
-                        <td>Niveau C1</td>
-                    </tr>
-                    <tr>
-                        <td>Allemand</td>
-                        <td>Niveau B2</td>
-                    </tr>
-                </table>
+            <!-- Languages -->
+            <div class="md:shadow-lg md:card bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title">Langues</h2>
+                    <table>
+                        <tr>
+                            <td>Français</td>
+                            <td>Langue Maternelle</td>
+                        </tr>
+                        <tr>
+                            <td>Anglais</td>
+                            <td>Niveau C1</td>
+                        </tr>
+                        <tr>
+                            <td>Allemand</td>
+                            <td>Niveau B2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Interest -->
+            <div class="md:shadow-lg md:card bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title">Intérêts</h2>
+                    <div class="flex flex-row flex-wrap gap-x-2 gap-y-1">
+                        <div class="badge badge-accent text-accent-content">Culture asiatique</div>
+                        <div class="badge badge-accent text-accent-content">Nouvelles technologies</div>
+                        <div class="badge badge-accent text-accent-content">Jeux vidéos</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- Interest -->
     </div>
     <script defer src="/js/alpine.js"></script>
     <script src="/js/components.js"></script>
