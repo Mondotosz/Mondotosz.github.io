@@ -1,18 +1,26 @@
 [
-    {
-        "name": "Visual Studio Code",
-        "level":2
-    },{
-        "name": "Visual Studio",
-        "level":1
-    },{
-        "name": "Notion",
-        "level":1
-    },{
-        "name": "Heidi SQL",
-        "level":1
-    },{
-        "name": "Mysql Workbench",
-        "level":1
-    }
+	{
+		"name": "Visual Studio Code",
+		"level": 1
+	},
+	{
+		"name": "Visual Studio",
+		"level": 1
+	},
+	{
+		"name": "Notion",
+		"level": 1
+	},
+	{
+		"name": "Heidi SQL",
+		"level": 1
+	},
+	{
+		"name": "Mysql Workbench",
+		"level": 1
+	},
+	{
+		"name": "Figma",
+		"level": 0
+	}
 ]
