@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Javascript",
+        "level":1
+    },{
+        "name": "C",
+        "level":0
+    },{
+        "name": "PHP",
+        "level":1
+    },{
+        "name": "C#",
+        "level":1
+    },{
+        "name": "Powershell",
+        "level":1
+    },{
+        "name": "Bash",
+        "level":0
+    },{
+        "name": "HTML",
+        "level":2
+    },{
+        "name": "CSS",
+        "level":1
+    },{
+        "name": "Markdown",
+        "level":2
+    },{
+        "name": "JSON",
+        "level":2
+    },{
+        "name": "XML",
+        "level":1
+    }
+]

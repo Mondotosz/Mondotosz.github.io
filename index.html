@@ -44,25 +44,73 @@
         <!-- Skills -->
         <div class="md:shadow-lg md:card bg-base-100">
             <div class="card-body">
-                <h2 class="card-title">Compétences</h2>
-                <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-12">
-                    <div class="grid items-center flex-grow grid-cols-3 gap-2">
-                        <h3 class="col-span-3 font-medium">Langages</h3>
-                        <p class="bg-accent border-accent badge text-accent-content">javascript</p>
-                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
-                        <p class="bg-accent border-accent badge text-accent-content">C</p>
-                        <progress class="col-span-2 progress progress-accent" value="30" max="100"></progress>
-                        <p class="bg-accent border-accent badge text-accent-content">C#</p>
-                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
+                <div x-data="dropdown()" class="relative flex items-center gap-2 card-title">
+                    <h2 class="text-xl font-medium">Compétences</h2>
+                    <button x-bind:="trigger"
+                        class="rounded-full focus:outline-none hover:text-primary-focus focus:ring-2 ring-primary-focus">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div x-cloak x-bind:="dialogue"
+                        class="absolute rounded-[var(--rounded-box,1rem)] bg-base-200 drop-shadow-lg -bottom-12">
+                        <div
+                            class="absolute top-0 w-6 h-6 origin-center transform rotate-45 bg-base-200 drop-shadow-lg inset-x-1/2">
+                        </div>
+                        <div class="relative flex gap-2 p-2 rounded-md bg-base-200">
+                            <p class="text-white bg-blue-400 border-blue-400 badge">Débutant</p>
+                            <p class="text-white bg-green-400 border-green-400 badge">Intermédiaire</p>
+                            <p class="text-white bg-yellow-400 border-yellow-400 badge">Avancé</p>
+                        </div>
                     </div>
-                    <div class="grid items-center flex-grow grid-cols-3 gap-2">
+                </div>
+                <div class="grid grid-cols-1 gap-2 md:gap-6 md:grid-cols-2">
+                    <div x-data="languages" class="flex flex-col justify-start gap-2">
+                        <h3 class="col-span-3 font-medium">Langages</h3>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <template x-for="language in languages">
+                                <p x-text="language.name" :class="styles[language.level]"
+                                    class="font-medium text-white badge"></p>
+                            </template>
+                            <p x-show="languages.length == 0"
+                                class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
+                            <p x-show="languages.length == 0"
+                                class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
+                            <p x-show="languages.length == 0"
+                                class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
+                        </div>
+                    </div>
+                    <div x-data="tools()" class="flex flex-col justify-start gap-2">
+                        <h3 class="col-span-3 font-medium">Outils</h3>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <template x-for="tool in tools">
+                                <p x-text="tool.name" :class="styles[tool.level]"
+                                    class="font-medium text-white badge"></p>
+                            </template>
+                            <p x-show="tools.length == 0"
+                                class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
+                            <p x-show="tools.length == 0"
+                                class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
+                            <p x-show="tools.length == 0"
+                                class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
+                        </div>
+                    </div>
+                    <div x-data="technologies()" class="flex flex-col justify-start gap-2 md:col-span-2">
                         <h3 class="col-span-3 font-medium">Technologies</h3>
-                        <p class="bg-accent border-accent badge text-accent-content">Tailwindcss</p>
-                        <progress class="col-span-2 progress progress-accent" value="50" max="100"></progress>
-                        <p class="bg-accent border-accent badge text-accent-content">Alpine.js</p>
-                        <progress class="col-span-2 progress progress-accent" value="40" max="100"></progress>
-                        <p class="bg-accent border-accent badge text-accent-content">JQuery</p>
-                        <progress class="col-span-2 progress progress-accent" value="30" max="100"></progress>
+                        <div class="flex flex-wrap items-center gap-2">
+                            <template x-for="technology in technologies">
+                                <p x-text="technology.name" :class="styles[technology.level]"
+                                    class="font-medium text-white badge"></p>
+                            </template>
+                            <p x-show="technologies.length == 0"
+                                class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
+                            <p x-show="technologies.length == 0"
+                                class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
+                            <p x-show="technologies.length == 0"
+                                class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +161,7 @@
             <div class="md:shadow-lg md:card bg-base-100">
                 <div class="card-body">
                     <h2 class="card-title">Langues</h2>
-                    <table>
+                    <table class="w-auto">
                         <tr>
                             <td>Français</td>
                             <td>Langue Maternelle</td>
@@ -133,10 +181,11 @@
             <div class="md:shadow-lg md:card bg-base-100">
                 <div class="card-body">
                     <h2 class="card-title">Intérêts</h2>
-                    <div class="flex flex-row flex-wrap gap-x-2 gap-y-1">
-                        <div class="badge badge-accent text-accent-content">Culture asiatique</div>
-                        <div class="badge badge-accent text-accent-content">Nouvelles technologies</div>
-                        <div class="badge badge-accent text-accent-content">Jeux vidéos</div>
+                    <div class="flex flex-row flex-wrap gap-2">
+                        <div class="font-medium text-white bg-blue-400 border-blue-400 badge">Culture asiatique</div>
+                        <div class="font-medium text-white bg-blue-400 border-blue-400 badge">Nouvelles technologies</div>
+                        <div class="font-medium text-white bg-blue-400 border-blue-400 badge">Jeux vidéos</div>
+                        <div class="font-medium text-white bg-blue-400 border-blue-400 badge">Musique</div>
                     </div>
                 </div>
             </div>
