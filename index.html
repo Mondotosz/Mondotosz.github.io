@@ -67,48 +67,48 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2 md:gap-6 md:grid-cols-2">
-                    <div x-data="languages" class="flex flex-col justify-start gap-2">
+                    <div x-data="skillDisplay('/data/languages.json')" class="flex flex-col justify-start gap-2">
                         <h3 class="col-span-3 font-medium">Langages</h3>
                         <div class="flex flex-wrap items-center gap-2">
-                            <template x-for="language in languages">
-                                <p x-text="language.name" :class="styles[language.level]"
+                            <template x-for="skill in skills">
+                                <p x-text="skill.name" :class="styles[skill.level]"
                                     class="font-medium text-white badge"></p>
                             </template>
-                            <p x-show="languages.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
-                            <p x-show="languages.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
-                            <p x-show="languages.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
                         </div>
                     </div>
-                    <div x-data="tools()" class="flex flex-col justify-start gap-2">
+                    <div x-data="skillDisplay('/data/tools.json')" class="flex flex-col justify-start gap-2">
                         <h3 class="col-span-3 font-medium">Outils</h3>
                         <div class="flex flex-wrap items-center gap-2">
-                            <template x-for="tool in tools">
-                                <p x-text="tool.name" :class="styles[tool.level]"
+                            <template x-for="skill in skills">
+                                <p x-text="skill.name" :class="styles[skill.level]"
                                     class="font-medium text-white badge"></p>
                             </template>
-                            <p x-show="tools.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
-                            <p x-show="tools.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
-                            <p x-show="tools.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
                         </div>
                     </div>
-                    <div x-data="technologies()" class="flex flex-col justify-start gap-2 md:col-span-2">
+                    <div x-data="skillDisplay('/data/technologies.json')" class="flex flex-col justify-start gap-2 md:col-span-2">
                         <h3 class="col-span-3 font-medium">Technologies</h3>
                         <div class="flex flex-wrap items-center gap-2">
-                            <template x-for="technology in technologies">
-                                <p x-text="technology.name" :class="styles[technology.level]"
+                            <template x-for="skill in skills">
+                                <p x-text="skill.name" :class="styles[skill.level]"
                                     class="font-medium text-white badge"></p>
                             </template>
-                            <p x-show="technologies.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-yellow-400 border-yellow-400 badge animate-pulse">...</p>
-                            <p x-show="technologies.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-green-400 border-green-400 badge animate-pulse">...</p>
-                            <p x-show="technologies.length == 0"
+                            <p x-show="skills.length == 0"
                                 class="w-12 text-white bg-blue-400 border-blue-400 badge animate-pulse">...</p>
                         </div>
                     </div>

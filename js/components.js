@@ -19,50 +19,21 @@ document.addEventListener("alpine:init", () => {
         }
     }))
 
-    Alpine.data('languages', () => ({
-        _languages: [],
+    Alpine.data('skillDisplay', (url) => ({
+        _url: url,
+        _skills: [],
         styles: ["bg-blue-400 border-blue-400", "bg-green-400 border-green-400", "bg-yellow-400 border-yellow-400"],
         init() {
-            fetch("/data/languages.json")
+            fetch(url)
                 .then(response => {
                     return response.json()
                 })
                 .then(data => {
-                    this._languages = data
+                    this._skills = data
                 })
         },
-        get languages() {
-            return [...this._languages].sort((a, b) => { return b.level - a.level })
-        }
-    }))
-
-    Alpine.data('tools', () => ({
-        tools: [],
-        styles: ["bg-blue-400 border-blue-400", "bg-green-400 border-green-400", "bg-yellow-400 border-yellow-400"],
-        init() {
-            fetch("/data/tools.json")
-                .then(response => {
-                    return response.json()
-                })
-                .then(data => {
-                    this.tools = data
-                    this.tools.sort((a, b) => { return b.level - a.level })
-                })
-        }
-    }))
-
-    Alpine.data('technologies', () => ({
-        technologies: [],
-        styles: ["bg-blue-400 border-blue-400", "bg-green-400 border-green-400", "bg-yellow-400 border-yellow-400"],
-        init() {
-            fetch("/data/technologies.json")
-                .then(response => {
-                    return response.json()
-                })
-                .then(data => {
-                    this.technologies = data
-                    this.technologies.sort((a, b) => { return b.level - a.level })
-                })
+        get skills() {
+            return [...this._skills].sort((a, b) => { return b.level - a.level })
         }
     }))
     // Stores
