@@ -1,0 +1,7 @@
+{
+    "prettier.bracketSameLine": true,
+    "prettier.prettierPath": "./node_modules/prettier",
+    "cSpell.words": [
+        "Nuxt"
+    ]
+}
